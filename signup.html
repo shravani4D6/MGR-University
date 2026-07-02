@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | The Tamil Nadu Dr.M.G.R. Medical University</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+        <!-- Sidebar Branding -->
+        <div class="auth-sidebar">
+            <div class="auth-sidebar-content">
+                <div class="mgr-logo">
+                    <img src="images/logo.png" alt="TNMGRMU Logo" style="height: 55px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); background: white; padding: 5px; border-radius: 4px;" onerror="this.src='https://www.tnmgrmu.ac.in/images/tnmgrmu_logo.png'">
+                </div>
+                <h1>Start Your Medical Career</h1>
+                <p>Join the state's premier medical university. Register now to apply for Medicine, Dentistry, AYUSH, and Allied Health Sciences for the 2026-27 academic year.</p>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="auth-main">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Create an Account</h2>
+                    <p>Enter your details to register for the admissions portal.</p>
+                </div>
+
+                <form action="dashboard.html" method="GET" id="signupForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="As per your official records" required>
+                        <i class="fas fa-user icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        <i class="fas fa-envelope icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                        <i class="fas fa-phone-alt icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Interested Course / Program</label>
+                        <select id="course" name="course" required style="width: 100%; padding: 12px 14px; padding-left: 40px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: 'Inter', sans-serif; appearance: none;">
+                            <option value="" disabled selected>Select a program</option>
+                            <option value="mbbs">MBBS - Bachelor of Medicine & Surgery</option>
+                            <option value="bds">BDS - Bachelor of Dental Surgery</option>
+                            <option value="ayush">AYUSH - Siddha/Ayurveda/Homeopathy</option>
+                            <option value="nursing">B.Sc Nursing / Allied Health</option>
+                            <option value="pharmacy">B.Pharm / Pharm.D</option>
+                        </select>
+                        <i class="fas fa-graduation-cap icon"></i>
+                    </div>
+
+                    <div class="checkbox-group" style="margin-top: 10px; padding: 16px; background: var(--bg-main); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent" style="font-weight: 400; font-size: 12px; color: var(--text-mid); line-height: 1.5; margin-bottom: 0;">
+                            I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="privacy.html">Privacy Policy</a>, and authorize <strong>The Tamil Nadu Dr.M.G.R. Medical University</strong> and its partners to contact me via Email, SMS, WhatsApp, RCS, or Voice Call, even if my number is on DNC/NDNC. I consent to be contacted regarding admissions and counseling.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Register Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Already registered? <a href="login.html" style="font-weight: 600;">Log in here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

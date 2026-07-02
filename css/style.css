@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    /* TNMGRMU Branding Colors */
+    --primary: #0D2C54;         /* Traditional Blue */
+    --primary-dark: #0A2140;    /* Deep Navy */
+    --primary-light: #E8EEF5;   /* Very Light Blue */
+    
+    --secondary: #9E1B1E;       /* Maroon/Red */
+    --secondary-hover: #801416; /* Darker Maroon */
+    --secondary-light: #F5E9E9; /* Light Red Tint */
+
+    --accent: #E11D48;          /* Rose/Red for alerts */
+    --success: #10B981;         /* Green for success */
+
+    /* Neutrals */
+    --text-dark: #1E293B;       /* Slate 800 */
+    --text-mid: #475569;        /* Slate 600 */
+    --text-light: #94A3B8;      /* Slate 400 */
+    
+    --bg-main: #F1F5F9;         /* Slate 100 */
+    --bg-white: #FFFFFF;
+    --border: #E2E8F0;          /* Slate 200 */
+    
+    /* Layout Variables */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* BASE RESETS */
+/* ─────────────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-mid);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* SPLIT SCREEN AUTHENTICATION LAYOUT */
+/* ─────────────────────────────────────────────────────────── */
+.auth-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--bg-white);
+}
+
+.auth-sidebar {
+    flex: 1.2;
+    background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    color: var(--bg-white);
+    overflow: hidden;
+}
+
+.auth-sidebar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.auth-sidebar-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mgr-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--secondary);
+}
+
+.mgr-logo i {
+    font-size: 36px;
+    background: var(--bg-white);
+    color: var(--primary-dark);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.auth-sidebar h1 {
+    color: var(--bg-white);
+    font-size: 42px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.auth-sidebar p {
+    font-size: 18px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* FORM SECTION */
+/* ─────────────────────────────────────────────────────────── */
+.auth-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: var(--bg-main);
+}
+
+.auth-card {
+    background: var(--bg-white);
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 50px;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-header h2 {
+    font-size: 28px;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    padding-left: 48px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text-dark);
+    background: var(--bg-white);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.form-group i.icon {
+    position: absolute;
+    left: 18px;
+    top: 40px;
+    color: var(--text-light);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.form-group input:focus + i.icon, .form-group select:focus + i.icon {
+    color: var(--primary);
+}
+
+/* BUTTONS */
+.btn-primary {
+    width: 100%;
+    background: var(--primary);
+    color: var(--bg-white);
+    border: none;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 79, 156, 0.25);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(26, 79, 156, 0.35);
+}
+
+/* CONSENT CHECKBOX */
+.consent-box {
+    background: var(--secondary-light);
+    border: 1px solid rgba(245, 166, 35, 0.3);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.consent-box input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.consent-box label {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-mid);
+    cursor: pointer;
+}
+
+.consent-box label a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14.5px;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* LEGAL DOCUMENTS (PRIVACY & TERMS) */
+/* ─────────────────────────────────────────────────────────── */
+.doc-header {
+    background: var(--primary-dark);
+    color: var(--bg-white);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.doc-header h1 {
+    color: var(--secondary);
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.doc-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--bg-white);
+    padding: 50px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.doc-section {
+    margin-bottom: 30px;
+}
+
+.doc-section h3 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.doc-section p {
+    margin-bottom: 14px;
+}
+
+.doc-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.doc-nav a {
+    padding: 10px 20px;
+    background: var(--bg-main);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}
+
+.doc-nav a:hover {
+    background: var(--primary-light);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* ANIMATIONS */
+/* ─────────────────────────────────────────────────────────── */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

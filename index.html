@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tamil Nadu Dr.M.G.R. Medical University | Official Admissions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Homepage specific styles */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, rgba(11, 43, 94, 0.95) 0%, rgba(26, 79, 156, 0.95) 100%), url('https://drmgrdu.ac.in/images/slider/new-banner-2.jpg') center/cover;
+            color: var(--bg-white);
+        }
+
+        .navbar {
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--bg-white);
+            font-weight: 500;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            color: var(--bg-white);
+            max-width: 900px;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            animation: slideUp 0.8s ease;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-weight: 300;
+            animation: slideUp 1s ease;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            animation: slideUp 1.2s ease;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: var(--primary-dark);
+        }
+        
+        .btn-solid {
+            background: var(--secondary);
+            border: 2px solid var(--secondary);
+            color: var(--primary-dark);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
+        }
+        
+        .btn-solid:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section" style="background: linear-gradient(135deg, rgba(13, 44, 84, 0.95) 0%, rgba(10, 33, 64, 0.95) 100%), url('https://drmgrdu.ac.in/images/slider/new-banner-2.jpg') center/cover;">
+        <nav class="navbar">
+            <div class="mgr-logo">
+                <img src="images/logo.png" alt="TNMGRMU Logo" style="height: 55px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); background: white; padding: 5px; border-radius: 4px;" onerror="this.src='https://www.tnmgrmu.ac.in/images/tnmgrmu_logo.png'">
+            </div>
+            <div class="nav-links">
+                <a href="#about">About Us</a>
+                <a href="#faculties">Faculties</a>
+                <a href="#research">Research</a>
+                <a href="login.html">Student Login</a>
+                <a href="signup.html" style="background: var(--secondary); color: var(--bg-white); padding: 10px 20px; border-radius: 4px; font-weight: 700; box-shadow: 0 4px 10px rgba(158, 27, 30, 0.4);">Apply Now</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div style="color: var(--secondary); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 30px;">Medical Admissions 2026-27</div>
+            <h1 style="font-size: 48px;">The Tamil Nadu Dr.M.G.R. Medical University</h1>
+            <p>Advancing Healthcare, Empowering Professionals. Discover excellence in Medicine, Dental Surgery, AYUSH, Nursing, and Allied Health Sciences.</p>
+            <div class="hero-actions">
+                <a href="signup.html" class="btn-solid" style="color: var(--bg-white);">Start Application</a>
+                <a href="login.html" class="btn-outline" style="color: var(--bg-white); border-color: var(--bg-white);">Track Admission Status</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ticker Section -->
+    <div style="background: var(--primary-dark); color: var(--secondary); padding: 12px 0; overflow: hidden; border-bottom: 3px solid var(--secondary); position: relative; z-index: 10;">
+        <div style="display: flex; white-space: nowrap; animation: scrollTicker 25s linear infinite;">
+            <span style="margin-right: 50px;"><i class="fas fa-bell"></i> Admissions Open for 2026-27 batch across all UG & PG programs.</span>
+            <span style="margin-right: 50px;"><i class="fas fa-trophy"></i> Ranked among India's Best Private Universities.</span>
+            <span style="margin-right: 50px;"><i class="fas fa-certificate"></i> UGC & AICTE Approved, NAAC Accredited.</span>
+        </div>
+    </div>
+    <style>
+        @keyframes scrollTicker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    </style>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 80px 20px; background: var(--bg-white);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="color: var(--primary-dark); font-size: 36px; margin-bottom: 20px;">About The Tamil Nadu Dr.M.G.R. Medical University</h2>
+                <p style="margin-bottom: 16px; color: var(--text-mid); font-size: 17px;">The Tamil Nadu Dr.M.G.R. Medical University is a premier medical institution located in Guindy, Chennai, Tamil Nadu. It is the second-largest health sciences university in India, established to promote excellence in medical education and research.</p>
+                <p style="margin-bottom: 24px; color: var(--text-mid); font-size: 17px;">We oversee a vast network of affiliated medical colleges, dental colleges, and paramedical institutions across the state, ensuring the highest standards of healthcare training.</p>
+                <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: underline;">Read our full history <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="background: var(--primary-light); padding: 30px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fas fa-hospital-user" style="font-size: 40px; color: var(--primary); margin-bottom: 12px;"></i>
+                        <h4 style="font-size: 24px; color: var(--primary-dark);">Top Medical</h4>
+                        <p style="font-size: 14px;">University in State</p>
+                    </div>
+                    <div style="background: var(--secondary-light); padding: 30px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fas fa-user-md" style="font-size: 40px; color: var(--secondary); margin-bottom: 12px;"></i>
+                        <h4 style="font-size: 24px; color: var(--primary-dark);">700+</h4>
+                        <p style="font-size: 14px;">Affiliated Colleges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculties Section -->
+    <section id="faculties" style="padding: 80px 20px; background: var(--bg-main);">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 style="color: var(--primary-dark); font-size: 36px; margin-bottom: 12px;">Medical Streams & Faculties</h2>
+                <p style="color: var(--text-mid); max-width: 600px; margin: 0 auto;">Explore undergraduate and postgraduate programs across our specialized health sciences disciplines.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <!-- Faculty Card 1 -->
+                <div style="background: var(--bg-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="height: 160px; background: linear-gradient(135deg, #0D2C54, #0A2140); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-stethoscope" style="font-size: 60px; color: var(--bg-white);"></i>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Faculty of Medicine</h3>
+                        <p style="font-size: 14.5px; color: var(--text-mid); margin-bottom: 16px;">Offering comprehensive MBBS, MD, and MS programs at top affiliated colleges.</p>
+                        <a href="signup.html?course=medicine" style="color: var(--primary); font-weight: 600;">Apply Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Faculty Card 2 -->
+                <div style="background: var(--bg-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="height: 160px; background: linear-gradient(135deg, #9E1B1E, #801416); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-tooth" style="font-size: 60px; color: var(--bg-white);"></i>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Faculty of Dentistry</h3>
+                        <p style="font-size: 14.5px; color: var(--text-mid); margin-bottom: 16px;">Leading BDS and MDS programs covering advanced oral and maxillofacial sciences.</p>
+                        <a href="signup.html?course=dental" style="color: var(--primary); font-weight: 600;">Apply Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Faculty Card 3 -->
+                <div style="background: var(--bg-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;">
+                    <div style="height: 160px; background: linear-gradient(135deg, #10B981, #059669); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-leaf" style="font-size: 60px; color: #fff;"></i>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Faculty of AYUSH</h3>
+                        <p style="font-size: 14.5px; color: var(--text-mid); margin-bottom: 16px;">Extensive programs in Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy.</p>
+                        <a href="signup.html?course=ayush" style="color: var(--primary); font-weight: 600;">Apply Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--primary-dark); color: var(--bg-white); padding: 60px 20px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <img src="images/logo.png" alt="TNMGRMU Logo" style="height: 50px; margin-bottom: 20px; background: white; padding: 4px; border-radius: 4px;" onerror="this.src='https://www.tnmgrmu.ac.in/images/tnmgrmu_logo.png'">
+                <p style="color: #94A3B8; font-size: 14px; line-height: 1.6;">The Tamil Nadu Dr.M.G.R. Medical University is a premier institution devoted to education and research in all fields of health sciences.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 18px;">Quick Links</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="signup.html" style="color: #94A3B8; text-decoration: none;">Admissions 2026-27</a></li>
+                    <li style="margin-bottom: 10px;"><a href="login.html" style="color: #94A3B8; text-decoration: none;">Student Portal Login</a></li>
+                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #94A3B8; text-decoration: none;">Terms & Conditions</a></li>
+                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 18px;">Contact Us</h4>
+                <p style="color: #94A3B8; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 69, Anna Salai, Guindy, Chennai, Tamil Nadu</p>
+                <p style="color: #94A3B8; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Administration: +91-44-22353094</p>
+                <p style="color: #94A3B8; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> registrar@tnmgrmu.ac.in</p>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #94A3B8; font-size: 13px;">
+            <p>&copy; 2026 The Tamil Nadu Dr.M.G.R. Medical University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
