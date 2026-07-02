@@ -42,6 +42,45 @@
             color: var(--secondary);
         }
 
+        .menu-toggle {
+            display: none;
+            color: var(--bg-white);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 20px;
+                position: relative;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: var(--primary-dark);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 20px;
+                z-index: 1000;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
         .hero-content {
             flex: 1;
             display: flex;
@@ -121,7 +160,10 @@
             <div class="mgr-logo">
                 <img src="images/logo.png" alt="TNMGRMU Logo" style="height: 55px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); background: white; padding: 5px; border-radius: 4px;" onerror="this.src='https://www.tnmgrmu.ac.in/images/tnmgrmu_logo.png'">
             </div>
-            <div class="nav-links">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
                 <a href="#about">About Us</a>
                 <a href="#faculties">Faculties</a>
                 <a href="#research">Research</a>
@@ -245,9 +287,9 @@
             </div>
             <div>
                 <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 18px;">Contact Us</h4>
-                <p style="color: #94A3B8; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 69, Anna Salai, Guindy, Chennai, Tamil Nadu</p>
-                <p style="color: #94A3B8; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Administration: +91-44-22353094</p>
-                <p style="color: #94A3B8; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> registrar@tnmgrmu.ac.in</p>
+                <p style="color: #FFFFFF; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 69, Anna Salai, Guindy, Chennai, Tamil Nadu</p>
+                <p style="color: #FFFFFF; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Administration: +91-44-22353094</p>
+                <p style="color: #FFFFFF; font-size: 14px; margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> registrar@tnmgrmu.ac.in</p>
             </div>
         </div>
         <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: #94A3B8; font-size: 13px;">
@@ -257,5 +299,10 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
