@@ -355,3 +355,110 @@ a:hover {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* ─────────────────────────────────────────────────────────── */
+/* MOBILE RESPONSIVENESS */
+/* ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+    /* Split Screen Auth */
+    .auth-wrapper {
+        flex-direction: column;
+    }
+
+    .auth-sidebar {
+        padding: 40px 20px;
+        text-align: center;
+        flex: none;
+    }
+
+    .mgr-logo {
+        justify-content: center;
+    }
+
+    .mgr-logo img {
+        height: 45px !important;
+        margin-bottom: 10px;
+    }
+
+    .auth-sidebar h1 {
+        font-size: 28px;
+    }
+
+    .auth-sidebar p {
+        font-size: 15px;
+    }
+
+    .auth-main {
+        padding: 20px;
+        flex: none;
+    }
+
+    .auth-card {
+        padding: 30px 20px;
+    }
+
+    .auth-header h2 {
+        font-size: 24px;
+    }
+
+    /* Homepage Navigation */
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* Homepage Hero */
+    .hero-content {
+        padding: 40px 20px;
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px !important;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-actions a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Documents */
+    .doc-container {
+        padding: 25px 15px;
+        margin: 20px 10px;
+    }
+
+    .doc-header {
+        padding: 40px 20px;
+    }
+
+    .doc-header h1 {
+        font-size: 30px;
+    }
+
+    .doc-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
