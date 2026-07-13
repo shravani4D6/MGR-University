@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inject Chat HTML into body
     const chatHTML = `
         <div class="chat-widget" id="mgrChatWidget" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; font-family: 'Inter', sans-serif;">
-            <div class="chat-tooltip" style="position: absolute; right: 70px; bottom: 15px; background: var(--bg-white); color: var(--primary-dark); padding: 10px 15px; border-radius: 8px; box-shadow: var(--shadow-md); white-space: nowrap; font-size: 13px; font-weight: 500; border-left: 4px solid var(--secondary);">
-                Welcome to MGR University... click here for Admission queries.
-            </div>
-            
             <button class="chat-trigger" style="width: 60px; height: 60px; border-radius: 50%; background: var(--secondary); color: var(--primary-dark); border: none; box-shadow: var(--shadow-lg); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; transition: transform 0.3s;">
                 <i class="fas fa-comment-dots"></i>
             </button>
